@@ -10,78 +10,128 @@ body, html {
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Evita el scroll horizontal */
+    overflow-x: hidden; 
     box-sizing: border-box;
 }
 
 section {
-    width: 100%; /* Asegura que las secciones ocupen todo el ancho */
-    display: block; /* Asegura que las secciones sean bloques */
-    margin: 0 auto; /* Centra el contenido dentro de las secciones */
-    padding: 20px; /* Añade padding si es necesario */
-    box-sizing: border-box; /* Evita que el padding afecte el ancho total */
+    width: 100%;
+    display: block; 
+    margin: 0 auto; 
+    padding: 20px; 
+    box-sizing: border-box;
 }
 
 .hero, .about-section, .skills-section, .contact-section {
-    width: 100%; /* Asegura que estas secciones ocupen todo el ancho */
+    width: 100%; 
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    text-align: center; /* Opcional: centra el texto dentro de las secciones */
+    text-align: center; 
 }
 
 .contact-content {
     width: 100%;
     display: flex;
-    flex-direction: column; /* Asegura que el contenido sea vertical */
-    align-items: center; /* Centra los elementos dentro del contenedor */
+    flex-direction: column; 
+    align-items: center; 
     box-sizing: border-box;
 }
 
 .contact-item {
-    width: 100%; /* Asegura que las tarjetas ocupen todo el ancho disponible */
-    max-width: 100%; /* Evita que se restrinjan a un ancho máximo */
+    width: 100%; 
+    max-width: 100%; 
     box-sizing: border-box;
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content:space-evenly ;
+    padding: 20px;
     background-color: #333;
     color: white;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-nav ul {
+header a:hover{
+    color: #f7a62b;
+}
+
+.logo img {
+    max-width: 100px;
+    border-radius: 200px;
+}
+
+.nav-links ul {
+    display: flex;
     list-style: none;
-    text-align: center;
-    margin: 0;
-    padding: 0;
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 0 20px;
+.nav-links li {
+    margin-left: 20px;
 }
 
-nav ul li a {
+.nav-links a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    padding: 10px;
-    transition: color 0.3s;
+    font-size: 18px;
 }
 
-nav ul li a:hover {
-    color: #f7b731;
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
 
-a{
-    text-decoration: none;
-    color: #f7a62b;
+.menu-icon span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links ul.active {
+        display: flex;
+        position: absolute;
+        top: 130px;
+        left: 0;
+        background-color: #333;
+        padding: 20px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+        z-index: 1001;
+    }
+}
+
+/* Menu Icon Animation */
+.menu-icon.active span:nth-child(1) {
+    transform: rotate(50deg) translate(10px, 10px);
+}
+
+.menu-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active span:nth-child(3) {
+    transform: rotate(-52deg) translate(6px, -6px);
 }
 
 /* Hero Section */
@@ -120,7 +170,7 @@ a{
     font-size: 1.2rem;
 }
 
-/* Sobre mí Section */
+/* Sección de Sobre mí */
 .about-section {
     padding: 100px 20px 150px;
     background-color: #222;
@@ -173,6 +223,59 @@ a{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Misión y Visión */
+.mission-vision {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.mission, .vision {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+}
+
+.mission h3, .vision h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.mission p, .vision p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Habilidades Blandas */
+.soft-skills {
+    margin-top: 50px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.soft-skills h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.soft-skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.soft-skills ul li {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin: 10px 0;
 }
 
 /* Sección de Habilidades */

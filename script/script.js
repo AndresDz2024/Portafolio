@@ -20,8 +20,23 @@ document.addEventListener("DOMContentLoaded", function() {
         updateProjectDisplay(currentProjectIndex);
     });
 
-    // Inicializar con el primer proyecto visible
     updateProjectDisplay(currentProjectIndex);
 
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const menuIcon = document.querySelector(".menu-icon");
+    const navLinks = document.querySelector(".nav-links ul");
+
+    menuIcon.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        menuIcon.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-links ul li a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            menuIcon.classList.remove("active");
+        });
+    });
+});
