@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrés Santiago Daza Daza - Portafolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Hola, soy Andrés Santiago Daza Daza<br><p>Desarrollador web con ideas innovadoras y elegantes.</p></h1>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>Sobre mí</h2>
+        <br>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Mi objetivo es impactar e influir en la sociedad con nuevas e innovadoras soluciones. Me destaco por mi capacidad para resolver problemas complejos y mi compromiso con la excelencia en cada proyecto. Busco la colaboración y el trabajo en equipo, valoro la diversidad de ideas y me esfuerzo por fomentar un ambiente de innovación y creatividad.</p>
+            </div>
+            <br><br>
+            <div class="about-images">
+                <div class="image-frame">
+                    <img src="./storage/yo.jpeg" alt="Imagen sobre mí 1">
+                </div>
+                <div class="image-frame">
+                    <img src="./storage/sobremi.jpeg" alt="Imagen sobre mí 2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>Proyectos</h2>
+        <div class="carousel">
+            <button class="carousel-btn prev-btn">&#10094;</button>
+            <div class="projects-container">
+                <div class="project-card active">
+                    <img src="./storage/spaceX.png" class="imagen1" alt="Proyecto 1">
+                    <h3>SpaceX</h3>
+                    <p>Fui asignado junto a un compañero para hacer un proyecto de javascript. Se nos fue encargado hacer cuatro pestañas de navegación, en las cuales se representan rokects, capsulas, historia y compañía, cada una de estas mostrando en totalidad la información proporcionada por la API de SpaceX.</p><br>
+                    <a href="https://github.com/AndresDz2024/PROYECTO-FILTRO_JS_DAZAANDRES-PATINOJUAN" target="_blank">Más información</a>
+                </div>
+                <div class="project-card" >
+                    <img src="./storage/KarioMedia.png" class="imagen2" alt="Proyecto 2">
+                    <h3>Kario Media</h3>
+                    <p>Para este proyecto, fui asignado junto a una compañera, los requerimientos en este proyecto, eran proponer y desarrollar el diseño para el aplicativo web de la empresa Kario Media, de manera que fuera comodo para los clientes y que fuera bien resivido por los administrativos.</p><br>
+                    <a href="https://github.com/AndresDz2024/PROYECTO-FILTRO_DazaAndres_MunozPaula" target="_blank">Más información</a>
+                </div>
+                <div class="project-card">
+                    <h3>Más Proyectos</h3>
+                    <p>¿Quieres conocer más de mis trabajos?</p><br><br>
+                    <img src="./storage/mas.png" class="imagen3" alt="Proyecto 3"><br><br>
+                    <a href="https://github.com/AndresDz2024?tab=repositories" target="_blank">Más información</a>
+                </div>
+            </div>
+            <button class="carousel-btn next-btn">&#10095;</button>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-section">
+        <h2>Contacto</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3><a href="https://www.linkedin.com/in/andr%C3%A9s-santiago-daza-daza-a1b058192/" target="_blank">LinkedIn</a></h3>
+                </div>
+                <div class="contact-item">
+                    <h3><a href="https://github.com/AndresDz2024" target="_blank">Github</a></h3>
+                </div>
+                <div class="contact-item">
+                    <h3>Email</h3>
+                    <p><a href="mailto:daza45daza@gmail.com">daza45daza@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Teléfono</h3>
+                    <p><a href="tel:+57 3168116629">+57 316 811 6629</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>Dirección</h3>
+                    <p>Campuslands, Zona Franca Santander, Bucaramanga, Colombia</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.5558881706656!2d-73.12854152428507!3d7.061352216678019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683fc2d64e4c7d%3A0x2264177758738113!2sCampuslands!5e0!3m2!1ses!2sco!4v1724105105603!5m2!1ses!2sco"
+                    width="600"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+            
+    <footer>
+        <p>&copy; 2024 Andrés Santiago Daza Daza. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./script/script.js"></script>
+</body>
+</html>
