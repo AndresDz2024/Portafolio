@@ -164,7 +164,7 @@ a{
     padding: 20px;
     margin: 10px;
     text-align: center;
-    flex: 1 1 calc(25% - 40px); 
+    flex: 1 1 calc(25% - 40px); /* Ajusta el ancho para que las tarjetas se alineen bien */
 }
 
 .skill-card h3 {
@@ -338,63 +338,4 @@ a{
 footer{
     align-items: center;
     text-align: center;
-}
-
-
-@media (max-width: 768px) {
-    
-    body {
-        font-size: 90%;
-    }
-
-    .hero {
-        height: 70vh; 
-    }
-
-    .hero h1 {
-        font-size: 2rem; 
-    }
-
-    .hero p {
-        font-size: 1rem; 
-    }
-
-    .about-section, .skills-section, .projects-section, .contact-section {
-        padding: 50px 10px; 
-    }
-
-    .about-content, .skills-container, .contact-content {
-        flex-direction: column; 
-        align-items: center;
-    }
-
-    .skill-card {
-        flex: 1 1 100%;
-        margin: 10px 0;
-    }
-
-    .carousel {
-        height: auto; 
-    }
-
-    .project-card {
-        min-width: 100%; 
-        padding: 20px;
-    }
-
-    .carousel-btn {
-        font-size: 1rem; 
-        padding: 5px; 
-    }
-}
-
-img, video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.image-frame {
-    width: 100%;
-    max-width: 400px;
 }
