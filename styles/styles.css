@@ -5,6 +5,25 @@ body {
     padding: 0;
     background-color: #1a1a1d;
     color: #f4f4f4;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.hero, .about-section, .skills-section, .projects-section, .contact-section {
+    padding: 80px 20px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 header {
@@ -342,59 +361,31 @@ footer{
 
 
 @media (max-width: 768px) {
-    
-    body {
-        font-size: 90%;
-    }
-
-    .hero {
-        height: 70vh; 
-    }
-
     .hero h1 {
-        font-size: 2rem; 
+        font-size: 2.5rem;
     }
 
-    .hero p {
-        font-size: 1rem; 
+    .hero p, .about-text p, .contact-item p, .skill-card p {
+        font-size: 1rem;
     }
 
-    .about-section, .skills-section, .projects-section, .contact-section {
-        padding: 50px 10px; 
+    .image-frame {
+        width: 80%;
+        margin: 10px auto; /* Centra las imágenes en pantallas pequeñas */
     }
 
-    .about-content, .skills-container, .contact-content {
-        flex-direction: column; 
-        align-items: center;
-    }
-
-    .skill-card {
-        flex: 1 1 100%;
-        margin: 10px 0;
-    }
-
-    .carousel {
-        height: auto; 
+    .projects-container {
+        flex-direction: column; /* Apilar proyectos verticalmente en lugar de en línea */
     }
 
     .project-card {
-        min-width: 100%; 
         padding: 20px;
-    }
-
-    .carousel-btn {
-        font-size: 1rem; 
-        padding: 5px; 
+        min-width: 100%; /* Asegúrate de que los proyectos ocupen todo el ancho en pantallas pequeñas */
     }
 }
 
-img, video {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-.image-frame {
-    width: 100%;
-    max-width: 400px;
+.container {
+    max-width: 100%; /* Permite que el contenedor use todo el ancho de la pantalla */
+    margin: 0 auto; /* Asegura que esté centrado */
+    padding: 0;
 }
