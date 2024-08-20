@@ -6,6 +6,43 @@ body {
     background-color: #1a1a1d;
     color: #f4f4f4;
 }
+body, html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+    box-sizing: border-box;
+}
+
+section {
+    width: 100%; /* Asegura que las secciones ocupen todo el ancho */
+    display: block; /* Asegura que las secciones sean bloques */
+    margin: 0 auto; /* Centra el contenido dentro de las secciones */
+    padding: 20px; /* Añade padding si es necesario */
+    box-sizing: border-box; /* Evita que el padding afecte el ancho total */
+}
+
+.hero, .about-section, .skills-section, .contact-section {
+    width: 100%; /* Asegura que estas secciones ocupen todo el ancho */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center; /* Opcional: centra el texto dentro de las secciones */
+}
+
+.contact-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Asegura que el contenido sea vertical */
+    align-items: center; /* Centra los elementos dentro del contenedor */
+    box-sizing: border-box;
+}
+
+.contact-item {
+    width: 100%; /* Asegura que las tarjetas ocupen todo el ancho disponible */
+    max-width: 100%; /* Evita que se restrinjan a un ancho máximo */
+    box-sizing: border-box;
+}
 
 header {
     background-color: #333;
